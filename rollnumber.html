@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roll Number Slip</title>
+  <link rel="stylesheet" href="rollnumber.css">
+</head>
+<body>
+    <!-- ✅ SINGLE NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">Laptop Scheme</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="application.html">Apply Now</a></li>
+      <li><a href="student-login.html">Student Login</a></li>
+      <li><a href="admin-login.html">Admin</a></li>
+      <li><a href="check-result.html">Check Result</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </nav>
+
+
+  <div class="slip-container">
+    <div class="header">
+      <img src="logo.png" alt="Logo" class="logo">
+      <h2>Laptop Scheme Examination</h2>
+      <p>Official Roll Number Slip</p>
+    </div>
+
+    <div class="student-info">
+      <div class="info-left">
+        <img src="student-photo.jpg" alt="Student Photo" class="student-photo">
+      </div>
+
+      <div class="info-right">
+        <p><strong>Name:</strong> John Doe</p>
+        <p><strong>Father’s Name:</strong> Ahmed Khan</p>
+        <p><strong>School:</strong> City Public School</p>
+        <p><strong>Course:</strong> FSC (Engineering)</p>
+        <p><strong>Contact:</strong> 0301-8813795</p>
+        <p><strong>Roll Number:</strong> LAP12345</p>
+        <p><strong>Test Date:</strong> 15 October 2025</p>
+      </div>
+    </div>
+
+    <div class="instructions">
+      <h3>Instructions for Candidates:</h3>
+      <ul>
+        <li>Bring this slip and your original CNIC or B-Form on test day.</li>
+        <li>Mobile phones, calculators, and electronic gadgets are not allowed.</li>
+        <li>Reach the exam center at least 30 minutes before the test time.</li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      <p>For queries, contact: support@laptopscheme.pk</p>
+      <button onclick="window.print()">Print Slip</button>
+    </div>
+  </div>
+
+</body>
+</html>

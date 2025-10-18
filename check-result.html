@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Check Result | Laptop Scheme</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="check-result.css">
+</head>
+<!-- ✅ SINGLE NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">Laptop Scheme</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="application.html">Apply Now</a></li>
+      <li><a href="student-login.html">Student Login</a></li>
+      <li><a href="admin-login.html">Admin</a></li>
+      <li><a href="check-result.html">Check Result</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </nav>
+<body>
+
+<div class="container">
+    <h2>Check Your Result</h2>
+
+    <form method="POST" action="check-result.php">
+        <input type="text" name="roll_number" placeholder="Enter Your Roll Number" required>
+        <button type="submit">Check</button>
+    </form>
+
+    <!-- Result Table -->
+    <?php
+    if(isset($_POST['roll_number'])){
+        include 'db.php';
+        $roll = mysqli_real_escape_string($conn, $_POST['roll_number']);
+        $student = mysqli_query($conn, "SELECT id, full_name FROM students WHERE id='$roll'"); // or roll_number if you have that column
+        if(mysqli_num_rows($student) == 0){
+            echo "<div class='message'>Student not found!</div>";
+        } else {
+            $s = mysqli_fetch_assoc($student);
+            $sid = $s['id'];
+            echo "<div class='message'>Results for ".$s['full_name']."</div>";
+            $results = mysqli_query($conn, "SELECT * FROM results WHERE student_id='$sid'");
+            if(mysqli_num_rows($results) == 0){
+                echo "<div class='message'>No results available yet.</div>";
+            } else {
+                echo "<table>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Marks Obtained</th>
+                            <th>Total Marks</th>
+                            <th>Grade</th>
+                        </tr>";
+                while($row = mysqli_fetch_assoc($results)){
+                    echo "<tr>
+                            <td>".$row['subject']."</td>
+                            <td>".$row['marks_obtained']."</td>
+                            <td>".$row['total_marks']."</td>
+                            <td>".$row['grade']."</td>
+                          </tr>";
+                }
+                echo "</table>";
+            }
+        }
+    }
+    ?>
+</div>
+
+</body>
+</html>

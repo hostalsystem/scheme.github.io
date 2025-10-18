@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact / Support | Laptop Scheme</title>
+  <link rel="stylesheet" href="contact.css" />
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- ✅ SINGLE NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">Laptop Scheme</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="application.html">Apply Now</a></li>
+      <li><a href="student-login.html">Student Login</a></li>
+      <li><a href="admin-login.html">Admin</a></li>
+      <li><a href="check-result.html">Check Result</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </nav>
+
+
+  <div class="contact-container">
+    <div class="contact-box">
+      <h2>Contact / Support</h2>
+      <p class="subtitle">Need help or have questions about the Laptop Scheme? We’re here to assist you!</p>
+
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          <p><strong>Email:</strong> support@laptopscheme.pk</p>
+          <p><strong>Phone:</strong> 0301-8813795</p>
+          <p><strong>Address:</strong> PILD Academy, Peshawar, Pakistan</p>
+
+          <div class="social-links">
+            <a href="#"><img src="facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="instagram.png" alt="Instagram"></a>
+          </div>
+        </div>
+
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" required placeholder="Enter your full name">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" required placeholder="Enter your email">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" rows="4" required placeholder="Write your message..."></textarea>
+          </div>
+
+          <button type="submit" class="send-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

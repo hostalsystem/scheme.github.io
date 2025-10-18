@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Login | Laptop Scheme</title>
+<link rel="stylesheet" href="admin-login.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">
+    <a href="index.html">Laptop Scheme</a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="application.html">Apply Now</a></li>
+    <li><a href="student-login.html">Student Login</a></li>
+    <li><a href="admin-login.html">Admin</a></li>
+    <li><a href="check-result.html">Check Result</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+</nav>
+
+<div class="admin-login-container">
+  <div class="admin-login-box">
+    <h2>Admin Login</h2>
+    <form action="backend/admin-login.php" method="POST">
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</div>
+
+<script>
+function toggleMenu() {
+  document.querySelector('.nav-links').classList.toggle('show');
+}
+</script>
+
+</body>
+</html>

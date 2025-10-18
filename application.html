@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apply Now | Laptop Scheme</title>
+  <link rel="stylesheet" href="application.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+   <!-- ✅ SINGLE NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">Smart Student Laptop Scheme</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="application.html">Apply Now</a></li>
+      <li><a href="student-login.html">Student Login</a></li>
+      <li><a href="admin-login.html">Admin</a></li>
+      <li><a href="check-result.html">Check Result</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <div class="apply-section">
+<form id="applicationForm" action="backend/submit_form.php" method="POST" enctype="multipart/form-data">
+
+  <div class="form-group">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="full_name" placeholder="Enter your full name" required />
+  </div>
+
+  <div class="form-group">
+    <label for="fatherName">Father’s Name:</label>
+    <input type="text" id="fatherName" name="father_name" placeholder="Enter your father’s name" required />
+  </div>
+
+  <div class="form-group">
+    <label for="school">School/Institute:</label>
+    <input type="text" id="school" name="institute" placeholder="Enter your school name" required />
+  </div>
+
+  <div class="form-group">
+    <label for="course">Course:</label>
+    <input type="text" id="course" name="course" placeholder="Enter your course (e.g. 7th, 8th, etc.)" required />
+  </div>
+
+  <div class="form-group">
+    <label for="contact">Contact Number:</label>
+    <input type="tel" id="contact" name="contact" placeholder="03XX-XXXXXXX" required />
+  </div>
+
+  <div class="form-group">
+    <label for="address">Full Address:</label>
+    <textarea id="address" name="address" rows="3" placeholder="Enter your full address" required></textarea>
+  </div>
+
+  <div class="form-group file-upload">
+    <label for="photo">Upload Photograph:</label>
+    <input type="file" id="photo" name="student_pic" accept="image/*" required />
+  </div>
+
+  <div class="form-group file-upload">
+    <label for="paymentProof">Upload Payment Proof:</label>
+    <input type="file" id="paymentProof" name="payment_pic" accept="image/*,application/pdf" required />
+  </div>
+
+  <button type="submit" class="btn-submit">Submit Application</button>
+</form>
+</div>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Smart Student Laptop Scheme. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

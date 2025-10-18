@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Student Laptop Scheme</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ✅ SINGLE NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">Smart Student Laptop Scheme</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="application.html">Apply Now</a></li>
+      <li><a href="student-login.html">Student Login</a></li>
+      <li><a href="admin.html">Admin</a></li>
+      <li><a href="check-result.html">Check Result</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <!-- ✅ HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Get Your Laptop with Ease</h1>
+      <p>Apply online and secure your laptop for academic success</p>
+      <div class="hero-buttons">
+        <a href="application.html" class="btn btn-primary">Apply Now</a>
+        <a href="student-login.html" class="btn btn-secondary">Login</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ PAYMENT INSTRUCTIONS -->
+  <section class="payment">
+    <h2>Payment Instructions</h2>
+    <div class="payment-cards">
+      <div class="card">
+        <h3>Bank Account</h3>
+        <p>Account Number: </p>
+        <p>Bank Name:  </p>
+      </div>
+      <div class="card">
+        <h3>Easypaisa</h3>
+        <p>Number: 03483000439</p>
+        <p>Name: Taufeeq Umer</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ HOW IT WORKS -->
+  <section class="steps">
+    <h2>How It Works</h2>
+    <div class="step-cards">
+      <div class="step">
+        <h3>1. Submit Application</h3>
+        <p>Fill the online application form with your details.</p>
+      </div>
+      <div class="step">
+        <h3>2. Payment Verification</h3>
+        <p>Upload your payment proof for verification.</p>
+      </div>
+      <div class="step">
+        <h3>3. Get Roll Number</h3>
+        <p>After verification, your roll number will be generated.</p>
+      </div>
+      <div class="step">
+        <h3>4. Attend Test</h3>
+        <p>Download roll number slip and attend the test on the given date.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ FOOTER -->
+  <footer>
+    <p>&copy; 2025 Smart Student Laptop Scheme. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>
